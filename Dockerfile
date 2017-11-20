@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y curl build-essential redis-server mongodb-server netcat
+RUN apt-get install -y curl build-essential redis-server mongodb-server netcat python
 
 # gpg keys listed at https://github.com/nodejs/node#release-team
 RUN set -ex \
