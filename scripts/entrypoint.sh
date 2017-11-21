@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 /usr/bin/redis-server /etc/redis/redis.conf
-service mongodb start
+(mongod & ) 1>/dev/null
 
 count=1
 max_wait=30
@@ -17,7 +17,7 @@ do
   fi
 
   sleep 1
-  echo "."
+  echo -n "."
   count=$((count+1))
 done
 
